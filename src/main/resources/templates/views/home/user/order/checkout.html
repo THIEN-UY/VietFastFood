@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+th:replace="~{/views/home/user/index.html :: dynamic(~{::body})}">
+<body>
+	<main style="padding-top:100px">
+	<div th:replace="~{/views/home/user/cart/view :: shopping_cart}"></div>
+		<div class="container">
+			<h2>Xác nhận thanh toán</h2>
+			<div>
+				<div class="row my-2">
+					<div class="form-group col-sm-6">
+						<div>Người mua:</div>
+						<div class="form-control"><span sec:authentication="name" id="username"></span>
+					</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<div>Ngày mua:</div>
+						<div class="form-control">{{order.createDate | date: 'dd-MM-yyyy'}}</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-12">
+						<div>Địa chỉ:</div>
+						<textarea ng-model="order.address" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer text-right">
+				<button ng-click="order.purchase()" class="btn btn-success my-3">Thanh toán</button>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

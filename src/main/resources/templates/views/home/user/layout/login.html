@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="keywords"
+	content="40%, ​Where every ingredient tells a story">
+<meta name="description" content="">
+<title>Việt Fast Food</title>
+<link rel="stylesheet" th:href="@{/assets/css/nicepage.css}" media="screen">
+<link rel="stylesheet" th:href="@{/assets/css/login.css}" media="screen">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script class="u-script" type="text/javascript"
+	th:src="@{/assets/js/jquery.js}" defer=""></script>
+<script class="u-script" type="text/javascript"
+	th:src="@{/assets/js/nicepage.js}" defer=""></script>
+<meta name="generator" content="Nicepage 5.13.1, nicepage.com">
+<meta name="referrer" content="origin">
+<link id="u-theme-google-font" rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+<link id="u-page-google-font" rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+<script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "WebSite5404213",
+		"logo": "images/723797_19484994_3556536_ab32e507_image.png",
+		"sameAs": []
+}</script>
+<meta name="theme-color" content="#4756c9">
+<meta property="og:title" content="login">
+<meta property="og:type" content="website">
+<meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="en">
+	<section class="u-align-center u-clearfix u-gradient u-section-1"
+		id="carousel_9116">
+		<a href="/index" class="u-image u-logo u-image-1" data-image-width="1000" data-image-height="1000"> <img
+					width=100px th:src="@{/assets/image/723797_19484994_3556536_ab32e507_image.png}"
+					class="u-logo-image u-logo-image-1">
+			</a>
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-text u-text-default u-text-1">Đăng nhập</h2>
+			<div
+				class="u-align-center u-container-style u-group u-radius-30 u-shape-round u-white u-group-1">
+				<div class="u-container-layout u-container-layout-1">
+					<div class="u-form u-form-1">
+					<form action="/auth/login" method="post">
+					  <div class="mb-3">
+					    <label for="exampleInputEmail1" class="form-label" style="float: left;">Tài khoản:</label>
+					    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					  </div>
+					  <div class="mb-3">
+					    <label for="exampleInputPassword1" class="form-label" style="float: left;">Mật khẩu:</label>
+					    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+					  </div>
+					  <div class="mb-3 form-check">
+					    <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
+					    <label class="form-check-label" for="exampleCheck1" style="float: left;">Lưu đăng nhập</label>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Đăng nhập</button>
+					</form>
+						<i th:text="${error}" style="color:red;"></i>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<footer id="sec-9b79" th:insert="~{/views/home/user/layout/footer.html}"></footer>
+</body>
+</html>

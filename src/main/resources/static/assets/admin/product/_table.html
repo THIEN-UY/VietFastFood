@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+	<div class="h2 m-3">Sản phẩm</div>
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Tên sản phẩm</th>
+				<th>Giá(VND)</th>
+				<th>Ngày tạo</th>
+				<th>Hình</th>
+				<th>Loại</th>
+				<th>Còn hàng</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="item in pager.items">
+				<td>{{item.id}}</td>
+				<td>{{item.name}}</td>
+				<td>{{item.price | number : 0}}</td>
+				<td>{{item.createDate | date: 'dd-MM-yyyy'}}</td>
+				<td>{{item.image}}</td>
+				<td>{{item.category.name}}</td>
+				<td>{{item.available?'Còn hàng':'Hết hàng'}}</td>
+				<td>
+					<div class="btn-group btn-group-xs">
+						<button class="btn btn-warning" ng-click="edit(item)" style="margin-right: 20px">Chỉnh sửa</button>
+						<button class="btn btn-warning" ng-click="delete(item)">Xóa</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<button ng-click="pager.first()" class="btn btn-danger">
+			<b>&lt;&lt;</b>
+		</button>
+		<button ng-click="pager.prev()" class="btn btn-danger">
+			<b>&lt;</b>
+		</button>
+		<button class="btn btn-danger">{{pager.page + 1}} of {{pager.count}}</button>
+		<button ng-click="pager.next()" class="btn btn-danger">
+			<b>&gt;</b>
+		</button>
+		<button ng-click="pager.last()" class="btn btn-danger">
+			<b>&gt;&gt;</b>
+		</button>
+	</div>
+</div>
